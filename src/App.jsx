@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import MainMenu from "./MainMenu";
-import Game from "./Game";
+import MainMenu from "./blocks/MainMenu";
+import Game from "./blocks/Game";
 import "./css/mainMenu.css";
 import keys_default from "./db/keys";
 

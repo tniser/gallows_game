@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import PlayComp from "./PlayComp";
 import TwoPlayer from "./TwoPlayer";
 

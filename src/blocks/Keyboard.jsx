@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import "./css/keyboard.css";
+import "../css/keyboard.css";
 
 function Keyboard({ keys, setKeys, setFails, word, setWord, setHintPressed }) {
   const letr = Object.keys(keys);

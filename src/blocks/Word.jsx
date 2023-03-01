@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/word.css";
+import "../css/word.css";
 
 function Word({ word }) {
   return (

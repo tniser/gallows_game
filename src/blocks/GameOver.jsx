@@ -1,4 +1,4 @@
-import "./css/gameOver.css";
+import "../css/gameOver.css";
 
 function GameOver({ fails, word, setGameMode, gameMode, setGame }) {
   const endGame = (e) => {

@@ -1,5 +1,5 @@
-import "./css/playComp.css";
-import words from "./db/words.json";
+import "../css/playComp.css";
+import words from "../db/words.json";
 
 function PlayComp({ difficulty, setDifficulty, setGame, setWord, setHint }) {
   const startGame = (e) => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./db/words.json";
-import "./css/game.css";
+import "../db/words.json";
+import "../css/game.css";
 import Word from "./Word";
 import Keyboard from "./Keyboard";
 import Canvas from "./Canvas";

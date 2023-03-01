@@ -1,4 +1,4 @@
-import "./css/twoPlayer.css";
+import "../css/twoPlayer.css";
 
 function TwoPlayer({ setWord, setHint, setGame }) {
   const startGame = (e) => {
