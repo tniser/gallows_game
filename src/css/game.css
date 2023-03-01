@@ -128,16 +128,6 @@
   transform-origin: 65px -40px;
 }
 
-/* .man::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 50%;
-  transform: translate(65px, -40px);
-} */
-
 .man.swing {
   animation: swing 3.5s ease-in-out infinite;
 }
@@ -152,7 +142,7 @@
   left: 35%;
   opacity: 0;
   transform-origin: bottom center;
-  rotate: -35deg;
+  animation: swingHead 3.5s ease-in-out infinite;
 }
 
 .man__body {
@@ -221,5 +211,17 @@
   }
   100% {
     transform: rotateZ(-25deg);
+  }
+}
+
+@keyframes swingHead {
+  0% {
+    transform: rotateZ(60deg);
+  }
+  50% {
+    transform: rotateZ(-60deg);
+  }
+  100% {
+    transform: rotateZ(60deg);
   }
 }
