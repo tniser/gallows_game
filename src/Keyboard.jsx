@@ -39,7 +39,7 @@ function Keyboard({ keys, setKeys, setFails, word, setWord, setHintPressed }) {
           key={item}
           id={item}
           className={keys[item] === true ? "key" : "key picked"}
-          onClick={(e) => handleKeyPick(e)}
+          onClick={(e) => keys[item] === true && handleKeyPick(e)}
         >
           {item}
         </p>
