@@ -9,7 +9,6 @@ import GameOver from "./GameOver";
 function Game({
   setGameMode,
   gameMode,
-  difficulty,
   setGame,
   hint,
   word,
@@ -21,39 +20,31 @@ function Game({
   const [hintPressed, setHintPressed] = useState(true);
   return (
     <div className="game">
-      <section className="canvas">
-        <Canvas
-          fails={fails}
-          hint={hint}
-          setHintPressed={setHintPressed}
-          hintPressed={hintPressed}
-        />
-      </section>
-      <section className="word">
-        <Word word={word} />
-      </section>
-      <section className="keyboard">
-        <Keyboard
-          fails={fails}
-          setFails={setFails}
-          keys={keys}
-          setKeys={setKeys}
-          word={word}
-          setWord={setWord}
-          setHintPressed={setHintPressed}
-        />
-      </section>
+      <Canvas
+        fails={fails}
+        hint={hint}
+        setHintPressed={setHintPressed}
+        hintPressed={hintPressed}
+      />
+      <Word word={word} />
+      <Keyboard
+        fails={fails}
+        setFails={setFails}
+        keys={keys}
+        setKeys={setKeys}
+        word={word}
+        setWord={setWord}
+        setHintPressed={setHintPressed}
+      />
 
       {(fails >= 6 || word.every((key) => key[1] === true)) && (
-        <section className="gameOver">
-          <GameOver
-            fails={fails}
-            gameMode={gameMode}
-            setGame={setGame}
-            word={word}
-            setGameMode={setGameMode}
-          />
-        </section>
+        <GameOver
+          fails={fails}
+          gameMode={gameMode}
+          setGame={setGame}
+          word={word}
+          setGameMode={setGameMode}
+        />
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 .gameOver {
   position: absolute;
-  width: 70%;
+  width: min(80%, 35em);
   background-color: var(--blue);
   border-radius: 10px;
   padding: 1em;

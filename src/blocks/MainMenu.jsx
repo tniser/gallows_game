@@ -13,7 +13,7 @@ function MainMenu({
 }) {
   return (
     <div className="mainMenu">
-      <div onClick={() => setGameMode("")} className="hero">
+      <section onClick={() => setGameMode("")} className="hero">
         <div className="sun"></div>
         <div className="hero__picture">
           <h1 className="mainTitle">The Gallows Game!</h1>
@@ -23,7 +23,7 @@ function MainMenu({
           <div className="line vertical"></div>
           <div className="line bottom"></div>
         </div>
-      </div>
+      </section>
       <form className="btns" onSubmit={(e) => e.preventDefault()}>
         <button className="mainMenu__btn" onClick={() => setGameMode("comp")}>
           Play with computer
