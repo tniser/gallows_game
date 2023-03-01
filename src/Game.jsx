@@ -1,0 +1,62 @@
+import { useState } from "react";
+import "./db/words.json";
+import "./css/game.css";
+import Word from "./Word";
+import Keyboard from "./Keyboard";
+import Canvas from "./Canvas";
+import GameOver from "./GameOver";
+
+function Game({
+  setGameMode,
+  gameMode,
+  difficulty,
+  setGame,
+  hint,
+  word,
+  setWord,
+  keys,
+  setKeys,
+}) {
+  const [fails, setFails] = useState(0);
+  const [hintPressed, setHintPressed] = useState(true);
+  return (
+    <div className="game">
+      <section className="canvas">
+        <Canvas
+          fails={fails}
+          hint={hint}
+          setHintPressed={setHintPressed}
+          hintPressed={hintPressed}
+        />
+      </section>
+      <section className="word">
+        <Word word={word} />
+      </section>
+      <section className="keyboard">
+        <Keyboard
+          fails={fails}
+          setFails={setFails}
+          keys={keys}
+          setKeys={setKeys}
+          word={word}
+          setWord={setWord}
+          setHintPressed={setHintPressed}
+        />
+      </section>
+
+      {(fails >= 6 || word.every((key) => key[1] === true)) && (
+        <section className="gameOver">
+          <GameOver
+            fails={fails}
+            gameMode={gameMode}
+            setGame={setGame}
+            word={word}
+            setGameMode={setGameMode}
+          />
+        </section>
+      )}
+    </div>
+  );
+}
+
+export default Game;

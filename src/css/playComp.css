@@ -1,0 +1,40 @@
+.playComp {
+  position: absolute;
+  background-color: var(--blue);
+  padding: 2em;
+  border-radius: 10px;
+  top: 35%;
+  box-shadow: var(--BOX-SHADOW);
+  z-index: 2;
+}
+
+.playComp__inner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.playComp h2 {
+  font-size: 2.2rem;
+  cursor: default;
+}
+
+ul {
+  font-size: min(2.5rem, 10vw);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+li {
+  cursor: pointer;
+  padding: 0.1em;
+  width: 100%;
+}
+
+li.picked {
+  border-radius: 40px;
+  outline: 3px solid var(--yellow);
+  box-shadow: -5px 6px 3px rgba(0, 0, 0, 0.3);
+}

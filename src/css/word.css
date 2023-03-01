@@ -1,0 +1,23 @@
+.word {
+  background-color: var(--blue);
+  width: 90%;
+  padding: 0.7em;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  border-radius: 10px;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.word__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.letter {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.2s;
+}

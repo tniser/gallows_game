@@ -1,0 +1,39 @@
+.keyboard {
+  display: flex;
+  width: 90%;
+  background-color: var(--blue);
+  font-size: min(2rem, 6vw);
+  padding: 0.5em;
+  color: var(--black);
+  border-radius: 10px;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.keyboard__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.3em;
+  height: 100%;
+}
+
+.key {
+  cursor: pointer;
+  display: grid;
+  border-radius: 10px;
+  place-content: center;
+  background-color: var(--white-btn);
+  width: min(3rem, 10vw);
+  height: min(3rem, 10vw);
+  transition: filter 0.5s, transform 0.2s, box-shadow 0.2s;
+}
+.key:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.key.picked:hover {
+  transform: translateY(0px);
+}
+.key.picked {
+  filter: opacity(0.3);
+}

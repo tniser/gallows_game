@@ -1,0 +1,42 @@
+:root {
+  /* VARIABLES  */
+  --orange: #ea7317;
+  --white: #fff;
+  --blue: #2364aa;
+  --white-btn: #d9d9d9;
+  --yellow: #fec601;
+  --black: #000;
+  --man: #73bfb8;
+
+  --BOX-SHADOW: -2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  background-color: #000;
+  color: var(--white);
+  font-family: "KoHo", sans-serif;
+}
+
+.root {
+  height: 100vh;
+}
+
+.App {
+  margin: 0 auto;
+  background-color: var(--orange);
+  height: 100vh;
+  max-width: 600px;
+}

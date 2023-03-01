@@ -1,0 +1,37 @@
+.twoPlayer {
+  position: absolute;
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 1em;
+  top: 300px;
+  box-shadow: var(--BOX-SHADOW);
+  z-index: 2;
+}
+
+.twoPlayer__inner h2 {
+  text-align: center;
+}
+
+.twoPlayer__inner form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 1.2em;
+  padding: 0.5em;
+}
+
+.twoPlayer__input[type="text"] {
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.2em;
+  font-size: clamp(1.4em, 6vw, 2.4em);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 0.8em;
+  border: none;
+  box-shadow: inset -1px 2px 4px 1px #888;
+}
+
+.twoPlayer__input[type="text"]:focus {
+  /*  outline: 2px solid var(--white-btn); */
+  box-shadow: var(--BOX-SHADOW);
+}
