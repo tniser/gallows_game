@@ -3,8 +3,10 @@ import MainMenu from "./blocks/MainMenu";
 import Game from "./blocks/Game";
 import "./css/mainMenu.css";
 import keys_default from "./db/keys";
+import keys_ru from "./db/keys_ru";
 
 function App() {
+  const [lang, setLang] = useState("en");
   const [gameMode, setGameMode] = useState("");
   const [game, setGame] = useState(false);
   const [difficulty, setDifficulty] = useState("Normal");
@@ -12,7 +14,7 @@ function App() {
   const [hint, setHint] = useState("");
   const [keys, setKeys] = useState({});
   useEffect(() => {
-    setKeys(keys_default);
+    lang === "en" ? setKeys(keys_default) : setKeys(keys_ru);
   }, [game]);
   return (
     <div className="App">
@@ -25,9 +27,12 @@ function App() {
           setGame={setGame}
           setHint={setHint}
           setWord={setWord}
+          lang={lang}
+          setLang={setLang}
         />
       ) : (
         <Game
+          lang={lang}
           word={word}
           setWord={setWord}
           hint={hint}

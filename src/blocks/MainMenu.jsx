@@ -1,8 +1,11 @@
 import React from "react";
+
 import PlayComp from "./PlayComp";
 import TwoPlayer from "./TwoPlayer";
 
 function MainMenu({
+  setLang,
+  lang,
   gameMode,
   setGameMode,
   difficulty,
@@ -13,6 +16,10 @@ function MainMenu({
 }) {
   return (
     <div className="mainMenu">
+      <div
+        className={"lang " + lang}
+        onClick={(e) => (lang === "en" ? setLang("ru") : setLang("en"))}
+      ></div>
       <section onClick={() => setGameMode("")} className="hero">
         <div className="sun"></div>
         <div className="hero__picture">
@@ -26,18 +33,19 @@ function MainMenu({
       </section>
       <form className="btns" onSubmit={(e) => e.preventDefault()}>
         <button className="mainMenu__btn" onClick={() => setGameMode("comp")}>
-          Play with computer
+          {lang === "en" ? "Play with computer" : "Играть с компьютером"}
         </button>
         <button
           className="mainMenu__btn"
           onClick={() => setGameMode("twoPlayer")}
         >
-          Two players game
+          {lang === "en" ? "Two players game" : "Играть вдоем"}
         </button>
       </form>
 
       {gameMode === "comp" && (
         <PlayComp
+          lang={lang}
           difficulty={difficulty}
           setDifficulty={setDifficulty}
           setGame={setGame}
@@ -46,7 +54,12 @@ function MainMenu({
         />
       )}
       {gameMode === "twoPlayer" && (
-        <TwoPlayer setWord={setWord} setHint={setHint} setGame={setGame} />
+        <TwoPlayer
+          lang={lang}
+          setWord={setWord}
+          setHint={setHint}
+          setGame={setGame}
+        />
       )}
     </div>
   );

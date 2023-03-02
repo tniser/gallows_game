@@ -7,6 +7,7 @@ import Canvas from "./Canvas";
 import GameOver from "./GameOver";
 
 function Game({
+  lang,
   setGameMode,
   gameMode,
   setGame,
@@ -39,6 +40,7 @@ function Game({
 
       {(fails >= 6 || word.every((key) => key[1] === true)) && (
         <GameOver
+          lang={lang}
           fails={fails}
           gameMode={gameMode}
           setGame={setGame}

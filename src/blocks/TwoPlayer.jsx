@@ -1,6 +1,6 @@
 import "../css/twoPlayer.css";
 
-function TwoPlayer({ setWord, setHint, setGame }) {
+function TwoPlayer({ lang, setWord, setHint, setGame }) {
   const startGame = (e) => {
     e.preventDefault();
     const word_str = document.getElementById("word").value.toUpperCase();
@@ -13,12 +13,18 @@ function TwoPlayer({ setWord, setHint, setGame }) {
   return (
     <div className="twoPlayer">
       <div className="twoPlayer__inner">
-        <h2>Player one chooses a word</h2>
+        <h2>
+          {lang === "en"
+            ? "Player one chooses a word"
+            : "Выберите слово для соперника"}
+        </h2>
         <form onSubmit={(e) => startGame(e)}>
           <input
             className="twoPlayer__input"
             type="text"
-            placeholder="Input your word here"
+            placeholder={
+              lang === "en" ? "Input your word here" : "Напишите слово"
+            }
             id="word"
             autoComplete="off"
             required
@@ -28,14 +34,16 @@ function TwoPlayer({ setWord, setHint, setGame }) {
           <input
             className="twoPlayer__input"
             type="text"
-            placeholder="Input your hint here"
+            placeholder={
+              lang === "en" ? "Input your hint here" : "Напишите подсказку"
+            }
             id="hint"
             autoComplete="off"
             required
             maxLength="40"
           ></input>
           <button type="submit" className="btn-start">
-            Start!
+            Начать
           </button>
         </form>
       </div>
