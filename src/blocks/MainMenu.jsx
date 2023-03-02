@@ -18,7 +18,15 @@ function MainMenu({
     <div className="mainMenu">
       <div
         className={"lang " + lang}
-        onClick={(e) => (lang === "en" ? setLang("ru") : setLang("en"))}
+        onClick={(e) => {
+          if (localStorage.getItem("lang") === "en") {
+            localStorage.setItem("lang", "ru");
+            setLang("ru");
+          } else {
+            localStorage.setItem("lang", "en");
+            setLang("en");
+          }
+        }}
       ></div>
       <section onClick={() => setGameMode("")} className="hero">
         <div className="sun"></div>
@@ -39,7 +47,7 @@ function MainMenu({
           className="mainMenu__btn"
           onClick={() => setGameMode("twoPlayer")}
         >
-          {lang === "en" ? "Two players game" : "Играть вдоем"}
+          {lang === "en" ? "Two players game" : "Играть вдвоем"}
         </button>
       </form>
 

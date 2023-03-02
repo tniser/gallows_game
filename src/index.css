@@ -27,7 +27,6 @@
 body {
   background-color: #000;
   color: var(--white);
-  font-family: "KoHo", sans-serif;
 }
 
 .root {
@@ -40,18 +39,29 @@ body {
   height: 100vh;
   max-width: 600px;
   position: relative;
+  font-family: "KoHo", sans-serif;
+}
+
+.App.ru,
+.App.ru h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
 .lang {
   position: absolute;
-  right: 1em;
+  right: 1.4em;
   top: 0;
   z-index: 3;
-  height: 2em;
-  width: 2em;
+  height: 2.3em;
+  width: 2.3em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  opacity: 0.7;
+}
+.lang:hover {
+  opacity: 1;
 }
 .lang.en {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg");

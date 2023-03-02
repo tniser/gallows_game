@@ -7,6 +7,7 @@ import keys_ru from "./db/keys_ru";
 
 function App() {
   const [lang, setLang] = useState("en");
+  !localStorage.getItem("lang") && localStorage.setItem("lang", "en");
   const [gameMode, setGameMode] = useState("");
   const [game, setGame] = useState(false);
   const [difficulty, setDifficulty] = useState("Normal");
@@ -16,8 +17,12 @@ function App() {
   useEffect(() => {
     lang === "en" ? setKeys(keys_default) : setKeys(keys_ru);
   }, [game]);
+  useEffect(() => {
+    setLang(localStorage.getItem("lang"));
+  }, []);
+
   return (
-    <div className="App">
+    <div className={lang === "en" ? "App" : "App ru"}>
       {!game ? (
         <MainMenu
           gameMode={gameMode}
