@@ -43,7 +43,7 @@ function TwoPlayer({ lang, setWord, setHint, setGame }) {
             maxLength="40"
           ></input>
           <button type="submit" className="btn-start">
-            Начать
+            {lang === "en" ? "Start!" : "Начать"}
           </button>
         </form>
       </div>
