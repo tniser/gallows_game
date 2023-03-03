@@ -4,7 +4,7 @@
   padding: 0.7em;
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  font-size: min(1.5em, 3vh);
   border-radius: 10px;
   box-shadow: var(--BOX-SHADOW);
   flex-shrink: 1;

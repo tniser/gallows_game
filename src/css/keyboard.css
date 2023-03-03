@@ -3,7 +3,7 @@
   flex-shrink: 1;
   width: 90%;
   background-color: var(--blue);
-  font-size: min(2rem, 6vw);
+  font-size: min(2rem, 5vw);
   padding: 0.5em;
   color: var(--black);
   border-radius: 10px;
@@ -19,13 +19,14 @@
 }
 
 .key {
+  flex-shrink: 1;
   cursor: pointer;
   display: grid;
   border-radius: 10px;
   place-content: center;
   background-color: var(--white-btn);
-  width: min(3rem, 10vw);
-  height: min(3rem, 10vw);
+  width: min(3rem, 6vh);
+  height: min(3rem, 6vh);
   transition: filter 0.5s, transform 0.2s, box-shadow 0.2s;
 }
 .key:hover {
