@@ -31,14 +31,12 @@ body {
 
 .root {
   height: 100vh;
-  height: 100dvh;
 }
 
 .App {
   margin: 0 auto;
   background-color: var(--orange);
   height: 100vh;
-  height: 100dvh;
   max-width: 600px;
   position: relative;
   font-family: "KoHo", sans-serif;

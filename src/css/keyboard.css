@@ -1,5 +1,6 @@
 .keyboard {
   display: flex;
+  flex-shrink: 1;
   width: 90%;
   background-color: var(--blue);
   font-size: min(2rem, 6vw);
